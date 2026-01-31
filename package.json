@@ -1,0 +1,16 @@
+{
+	"name": "boilerplate",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"prepare": "husky",
+		"dev": "pnpm --parallel run dev",
+		"build": "pnpm --parallel run build"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.4.0",
+		"@commitlint/config-conventional": "^20.4.0",
+		"husky": "^9.1.7"
+	}
+}
