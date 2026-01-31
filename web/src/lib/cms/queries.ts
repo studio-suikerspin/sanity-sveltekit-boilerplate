@@ -1,3 +1,20 @@
 import { groq } from '@sanity/sveltekit';
 
-export const homePageQuery = groq`*[_type == "page" && slug.current == "home"][0]`;
+export const pageBySlugQuery = groq`*[_type == "page" && slug.current == $slug][0]{
+     _id,
+     title,
+     "slug": slug.current,
+     content
+}`;
+
+export const allPagesQuery = groq`*[_type == "page"]{
+     _id,
+     title,
+     "slug": slug.current
+}`;
+
+export const globalSettingsQuery = groq`*[_type == "globalSettings"][0]{
+     siteTitle,
+     siteDescription,
+     navigation
+}`;
