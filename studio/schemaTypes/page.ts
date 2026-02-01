@@ -22,6 +22,14 @@ export const pageType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'featuredImage',
+      title: 'Featured Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',

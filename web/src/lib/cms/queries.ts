@@ -4,6 +4,7 @@ export const pageBySlugQuery = groq`*[_type == "page" && slug.current == $slug][
      _id,
      title,
      "slug": slug.current,
+     featuredImage,
      content
 }`;
 
