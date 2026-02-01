@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createImageUrlBuilder} from '@sanity/image-url';
+	import { createImageUrlBuilder } from '@sanity/image-url';
 	import { client } from '$lib/cms/client';
 	import type { SanityImageSource } from '@sanity/image-url';
 

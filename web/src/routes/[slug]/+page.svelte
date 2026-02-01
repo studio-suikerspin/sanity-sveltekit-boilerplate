@@ -1,18 +1,24 @@
 <script lang="ts">
+	import { useQuery } from '@sanity/sveltekit';
 	import SanityImage from '$lib/components/SanityImage.svelte';
 	import { PortableText } from '@portabletext/svelte';
+	import type { PageProps } from './$types.js';
 
-	const { data } = $props();
+	const { data }: PageProps = $props();
+	const query = useQuery(data);
+	const page = $derived($query.data);
 </script>
 
-<h1>{data.page.title}</h1>
+{#if page}
+	<h1>{page.title}</h1>
 
-{#if data.page.featuredImage}
-     <SanityImage source={data.page.featuredImage} alt={data.page.title} width={800} />
-{/if}
+	{#if page.featuredImage}
+		<SanityImage source={page.featuredImage} alt={page.title} width={800} />
+	{/if}
 
-{#if data.page.content}
-	<div class="content">
-		<PortableText value={data.page.content} />
-	</div>
+	{#if page.content}
+		<div class="content">
+			<PortableText value={page.content} />
+		</div>
+	{/if}
 {/if}
