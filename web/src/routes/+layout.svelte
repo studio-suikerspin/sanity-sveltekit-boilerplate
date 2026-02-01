@@ -10,6 +10,7 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import { onMount } from 'svelte';
+	import { onNavigate } from '$app/navigation';
 
 	const { children, data }: LayoutProps = $props();
 	const { previewEnabled } = data;
@@ -18,6 +19,17 @@
 		ScrollSmoother.create({
 			smooth: 1,
 			effects: true
+		});
+	});
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
 		});
 	});
 </script>

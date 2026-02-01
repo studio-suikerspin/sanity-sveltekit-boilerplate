@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { resolve } from '$app/paths';
 
 	const status = $derived($page.status);
 	const message = $derived($page.error?.message || 'Something went wrong');
@@ -7,14 +8,14 @@
 
 <svelte:head>
 	<title>{status} Error</title>
-	<meta name="robots" content="noindex, nofollow">
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div class="error-page">
 	<div class="container">
 		<h1>{status}</h1>
 		<p class="message">{message}</p>
-		<a href="/" class="home-link">Back to home</a>
+		<a href={resolve('/')} class="home-link">Back to home</a>
 	</div>
 </div>
 
