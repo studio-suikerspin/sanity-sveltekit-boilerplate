@@ -1,3 +1,2 @@
-pnpm --filter web lint
-pnpm --filter web format
+npx lint-staged
 git add -u

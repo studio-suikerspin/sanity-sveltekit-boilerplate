@@ -1,0 +1,6 @@
+{
+	"web/**/*.{js,ts,svelte}": [
+		"pnpm --filter web exec eslint --fix",
+		"pnpm --filter web exec prettier --write"
+	]
+}

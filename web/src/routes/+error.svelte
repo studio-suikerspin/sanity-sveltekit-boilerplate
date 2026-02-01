@@ -15,7 +15,7 @@
 	<div class="container">
 		<h1>{status}</h1>
 		<p class="message">{message}</p>
-		<a href={resolve('/')} class="home-link">Back to home</a>
+		<a href={resolve('/')} class="home-link">Return to homepage</a>
 	</div>
 </div>
 
