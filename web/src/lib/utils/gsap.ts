@@ -1,0 +1,12 @@
+import { browser } from '$app/environment';
+
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollSmoother from 'gsap/ScrollSmoother';
+import SplitText from 'gsap/SplitText';
+
+if (browser) {
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+}
+
+export { gsap, ScrollTrigger, ScrollSmoother, SplitText };
