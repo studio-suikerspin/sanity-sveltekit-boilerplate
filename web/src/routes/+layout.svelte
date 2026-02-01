@@ -1,5 +1,5 @@
 <script lang="ts">
-     import '$lib/styles/global.css';
+	import '$lib/styles/global.css';
 
 	import { PreviewMode, QueryLoader, VisualEditing } from '@sanity/sveltekit';
 	import { client } from '$lib/cms/client';
