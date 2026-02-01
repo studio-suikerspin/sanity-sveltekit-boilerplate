@@ -33,7 +33,7 @@
 				<div id="smooth-content">
 					<Header />
 
-					<main style="height: 200vh">
+					<main>
 						{@render children()}
 					</main>
 
