@@ -1,2 +1,3 @@
 pnpm --filter web lint
 pnpm --filter web format
+git add -u
