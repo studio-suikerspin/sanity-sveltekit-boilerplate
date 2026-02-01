@@ -1,0 +1,17 @@
+[build]
+  base = "web"
+  command = "pnpm build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--version" # Prevents npm install, we're using pnpm
+
+[context.production]
+  command = "pnpm build"
+
+[context.deploy-preview]
+  command = "pnpm build"
+
+[context.branch-deploy]
+  command = "pnpm build"
