@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useQuery } from '@sanity/sveltekit';
-	import SanityImage from '$lib/components/SanityImage.svelte';
+	import SanityImage from '$lib/components/cms/SanityImage.svelte';
 	import { PortableText } from '@portabletext/svelte';
 	import type { PageProps } from './$types.js';
 
