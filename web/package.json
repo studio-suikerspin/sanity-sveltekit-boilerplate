@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"@sanity/image-url": "^2.0.3",
+		"@sanity/svelte-loader": "^2.0.10",
 		"@sanity/sveltekit": "^1.0.5",
 		"gsap": "^3.14.2"
 	}
